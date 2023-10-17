@@ -14,5 +14,15 @@
 
 //#1 camelize(str)
 
-function camelize(str) {}
-console.log(camelize("my_string"));
+function camelize(str) {
+  let strToArray = str.split("");
+  let arrToStr = [];
+  for (let i = 0; i < str.length; i++)
+    if (strToArray[i] === "-") {
+      strToArray.splice(i, 1);
+      strToArray[i] = strToArray[i].toUpperCase();
+    }
+  arrToStr = strToArray.join(" ");
+  return arrToStr;
+}
+console.log(camelize("my-string-to"));
