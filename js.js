@@ -12,17 +12,27 @@
 // let strArr = str.split(" ");
 // console.log(strArr);
 
-//#1 camelize(str)
+//#1 camelize(str) First solution
+// function camelize(str) {
+//   let strToArray = str.split("");
+//   let arrToStr = [];
+//   for (let i = 0; i < str.length; i++)
+//     if (strToArray[i] === "-") {
+//       strToArray.splice(i, 1);
+//       strToArray[i] = strToArray[i].toUpperCase();
+//     }
+//   arrToStr = strToArray.join(" ");
+//   return arrToStr;
+// }
+// console.log(camelize("my-string-to"));
+// #1 camelize(str) Second solution
 
 function camelize(str) {
-  let strToArray = str.split("");
-  let arrToStr = [];
-  for (let i = 0; i < str.length; i++)
-    if (strToArray[i] === "-") {
-      strToArray.splice(i, 1);
-      strToArray[i] = strToArray[i].toUpperCase();
-    }
-  arrToStr = strToArray.join(" ");
-  return arrToStr;
+  return str
+    .split("-")
+    .map((item, index) =>
+      index == 0 ? item : item[0].toUpperCase() + item.slice(1)
+    )
+    .join("");
 }
-console.log(camelize("my-string-to"));
+console.log(camelize("my-str-is-here"));
