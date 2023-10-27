@@ -27,12 +27,25 @@
 // console.log(camelize("my-string-to"));
 // #1 camelize(str) Second solution
 
-function camelize(str) {
-  return str
-    .split("-")
-    .map((item, index) =>
-      index == 0 ? item : item[0].toUpperCase() + item.slice(1)
-    )
-    .join("");
+// function camelize(str) {
+//   return str
+//     .split("-")
+//     .map((item, index) =>
+//       item == 0 ? item : item[0].toUpperCase() + item.slice(1)
+//     )
+//     .join("");
+// }
+// console.log(camelize("my-str-is-here"));
+
+// # filterRange function
+
+let arr = [2, 4, 5, 7, 1];
+let filtered = filteredRange(arr, 2, 4);
+function filteredRange(arr, a, b) {
+  let newArr = arr.slice();
+
+  console.log(newArr);
+  return newArr.filter((item) => item > a && item < b);
 }
-console.log(camelize("my-str-is-here"));
+console.log(filtered);
+console.log(arr);
