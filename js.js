@@ -39,13 +39,26 @@
 
 // # filterRange function
 
+// let arr = [2, 4, 5, 7, 1];
+// let filtered = filteredRange(arr, 2, 4);
+// function filteredRange(arr, a, b) {
+//   let newArr = arr.slice();
+
+//   console.log(newArr);
+//   return newArr.filter((item) => item > a && item < b);
+// }
+// console.log(filtered);
+// console.log(arr);
+
 let arr = [2, 4, 5, 7, 1];
 let filtered = filteredRange(arr, 2, 4);
+
 function filteredRange(arr, a, b) {
   let newArr = arr.slice();
 
   console.log(newArr);
   return newArr.filter((item) => item > a && item < b);
 }
-console.log(filtered);
-console.log(arr);
+
+console.log(filtered); // Output: [4]
+console.log(arr); // Output: [2, 4, 5, 7, 1]
